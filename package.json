@@ -9,14 +9,19 @@
     "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "^10.4.24",
     "axios": "^1.13.4",
+    "dotenv": "^17.3.1",
+    "firebase": "^12.9.0",
     "framer-motion": "^12.29.2",
+    "lucide-react": "^0.564.0",
     "postcss": "^8.5.6",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-scripts": "5.0.1",
     "recharts": "^3.7.0",
+    "socket.io-client": "^4.8.3",
     "tailwindcss": "^4.1.18",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yahoo-finance2": "^3.13.0"
   },
   "scripts": {
     "start": "react-scripts start",
