@@ -53,7 +53,9 @@
                 <span class="gradient-text uppercase">WEALTHOS</span>
             </h1>
             <p class="text-slate-400 max-w-2xl mx-auto italic text-lg leading-relaxed border-l-2 border-blue-500/30 pl-6 text-left">
-                "WealthOS is an AI-powered financial intelligence platform for future prediction of stocks, combining real-time market movement, event-driven headlines, and personalized portfolio insights in one decision-ready dashboard."
+                "WealthOS is an AI-powered financial intelligence platform for future prediction of stocks, combining real-time market movement,
+                event-driven headlines, macro indicators, and personalized portfolio intelligence inside one unified decision dashboard.
+                The goal is to help retail investors move from reactive trading to context-aware, data-backed investing."
             </p>
         </section>
 
@@ -61,23 +63,29 @@
             <div class="glass p-10 rounded-[2.5rem] flex flex-col justify-center border-l-4 border-blue-600">
                 <h2 class="text-3xl font-extrabold mb-6">Problem Statement</h2>
                 <p class="text-slate-400 leading-relaxed text-justify">
-                    Investors typically depend on fragmented tools for charts, news, and advisory, resulting in delayed reaction and poor decision quality during volatility.
-                    There is no unified student-level system that gives:
-                    live stock movement, predictive analytics, macro-event context (war/inflation/rates), and actionable AI guidance in one place.
-                    WealthOS solves this integration gap.
+                    Investors typically depend on fragmented tools for charting, market news, and investment advice.
+                    This fragmentation causes delayed reactions and inconsistent decision quality during volatile events such as war,
+                    inflation surprises, or central bank policy announcements. In practice, users struggle to connect three critical layers:
+                    (1) what is happening globally, (2) how markets are reacting, and (3) what action is relevant for their own portfolio.
+                    WealthOS addresses this by building a single platform that delivers live market tracking, stock forecasting,
+                    macro-event headlines, and AI-assisted action guidance in one workflow.
                 </p>
             </div>
             <div class="space-y-6">
                 <div class="glass p-7 rounded-3xl border-r-4 border-blue-500/50">
                     <h3 class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-2">Literature Review / Market Research</h3>
                     <p class="text-sm text-slate-500 italic">
-                        Studied retail trading dashboards, robo-advisory systems, and forecast-based stock analytics. Existing solutions either focus on charting OR news OR chat, but rarely provide integrated explainability and action tooling.
+                        We studied retail trading dashboards, robo-advisory assistants, and forecast-first analytics platforms.
+                        Most products are strong in one dimension (charts OR news OR chatbot), but weak in integrated reasoning.
+                        Very few systems provide explainable linkage between live events, portfolio-level risk, and immediate next actions.
                     </p>
                 </div>
                 <div class="glass p-7 rounded-3xl border-r-4 border-purple-500/50">
                     <h3 class="text-purple-400 font-bold text-xs uppercase tracking-widest mb-2">Research Gap / Innovation</h3>
                     <p class="text-sm text-slate-500 italic">
-                        WealthOS introduces a unified stack: AI chat + deterministic trade actions + LSTM-style forecasting + real headlines + macro overlays (Oil, S&P, Nasdaq, VIX, Gold) with a premium UX.
+                        WealthOS introduces a unified stack: deterministic trade tooling + AI conversation + LSTM-style forecasting +
+                        real headline ingestion + macro overlays (Oil, S&P 500, Nasdaq, VIX, Gold). A major innovation is resilient behavior:
+                        even when cloud LLM fails, the system still supports practical action flows through deterministic local logic.
                     </p>
                 </div>
             </div>
@@ -90,16 +98,19 @@
                     <i class="fas fa-database text-blue-500 text-3xl mb-4"></i>
                     <h3 class="font-bold mb-2 uppercase text-xs tracking-widest">Dataset / Input</h3>
                     <p class="text-sm text-slate-500">
-                        Socket.IO live market pulse, historical synthetic timeline, real RSS financial headlines, oil & macro indicators, and user portfolio data from Firebase.
+                        Inputs include: Socket.IO live market pulse, historical synthetic timeline for chart continuity,
+                        real RSS financial headlines (Yahoo/Google feeds), oil and macro indicators from public data APIs,
+                        and user financial state (wallet, holdings, transactions, alerts) via Firebase persistence.
                     </p>
                 </div>
                 <div class="glass p-8 rounded-3xl text-center">
                     <i class="fas fa-microchip text-purple-500 text-3xl mb-4"></i>
                     <h3 class="font-bold mb-2 uppercase text-xs tracking-widest">Model / Architecture</h3>
                     <p class="text-sm text-slate-500">
-                        Frontend: React + Recharts + Socket client.<br />
-                        Backend: Node.js/Express (chat + actions + SMS).<br />
-                        ML Server: Flask + PyTorch LSTM-style prediction + macro/news endpoints.
+                        Frontend: React + Recharts + Socket client for live visual intelligence.<br />
+                        Backend: Node.js/Express for chat orchestration, trade intents, reliability fallbacks, and SMS alerts.<br />
+                        ML Server: Flask + PyTorch LSTM-style prediction, news processing, oil/macro endpoints, and forecast APIs.<br />
+                        Data Flow: User query → intent routing → prediction/news/macro enrichment → explainable response.
                     </p>
                 </div>
                 <div class="glass p-8 rounded-3xl text-center border-2 border-green-500/20 bg-green-500/5">
@@ -119,10 +130,23 @@
                         <span class="text-slate-400 font-bold uppercase text-xs tracking-widest">Integrated Decision Support Score</span>
                         <span class="text-blue-400 font-mono font-black text-3xl">92.0%</span>
                     </div>
+                    <div class="p-5 rounded-2xl bg-white/5 border border-white/10">
+                        <p class="text-slate-300 text-xs uppercase tracking-widest font-bold mb-2">Observed Performance Summary</p>
+                        <ul class="text-slate-400 text-sm space-y-1 list-disc pl-5 text-left">
+                            <li>Faster decision loop by unifying charts, macro headlines, and assistant actions in one screen.</li>
+                            <li>Higher reliability due to deterministic tool-routing when external LLM providers timeout.</li>
+                            <li>Improved interpretability through contextual “why this matters” impact statements.</li>
+                            <li>Better investor awareness using macro overlays (oil, index, volatility) on top of stock movement.</li>
+                        </ul>
+                    </div>
                     <p class="text-slate-500 text-sm italic text-justify leading-relaxed">
-                        The final system successfully demonstrates end-to-end integration:
-                        real-time market stream, AI-powered stock prediction requests, contextual headline interpretation,
-                        and resilient chatbot behavior through multi-provider + local fallback design.
+                        The final system demonstrates end-to-end integration quality across reliability, usability, and insight depth.
+                        During validation, WealthOS consistently provided actionable outcomes for both explicit commands
+                        (buy/sell/predict/show news) and open-ended advisory prompts.
+                        In stress scenarios where a cloud LLM failed, the platform continued serving meaningful responses
+                        using local advisory logic and deterministic action handlers, preventing workflow breakdown.
+                        This makes the system practical for real-world volatility, where continuity of guidance is as important
+                        as model sophistication.
                     </p>
                 </div>
             </div>
